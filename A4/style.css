@@ -1,0 +1,72 @@
+header {
+    background-image: url(Bild_Lenny.jpg);
+    height: 400px;
+}
+
+
+
+.container {
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+
+body {
+    font-family: verdana;
+    color: black;
+}
+
+#navi {
+    text-align: right;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#navi li {
+    display: inline;
+}
+
+#navi a:link {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+}
+
+#navi a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+}
+
+#navi a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #eaeaea;
+    font-size: 12pt;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+table {
+    width: 100%;
+}
+
+ .textarea {
+
+    font-size: 10;
+    color: rgb(0, 0, 0);
+    width: 800px;
+  
+    
+
+ }
