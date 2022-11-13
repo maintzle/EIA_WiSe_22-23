@@ -1,0 +1,136 @@
+header {
+    background-image: url(Bild_Lenny.jpg);
+    height: 400px;
+    animation-name: slideshow;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.störer{
+    float: right;
+    position: sticky;
+    top: 40px;
+    right: 30px;
+    width: 150px;
+    height: 150px;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+
+body {
+    font-family: "Playfair+Display&display";
+    color: black;
+}
+#navi {
+    text-align: right;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#navi li {
+    display: inline;
+}
+
+#navi a:link {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+}
+
+#navi a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+}
+
+#navi a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    background-color: #eaeaea;
+    font-size: 12pt;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+table {
+    width: 100%;
+}
+
+.textarea {
+
+    font-size: 10;
+    color: rgb(0, 0, 0);
+    width: 800px;
+
+
+
+}
+
+@keyframes slideshow{
+    0%,
+    50% {
+        background-image: url("bild_lenny.jpg");
+    }
+    50%,
+    100% {
+        background-image: url("Bild_lenny_2.jpg");
+    }
+    100% {
+        background-image: url("bild_lenny.jpg");
+    }
+}
+
+.grid img {
+    height: 200px;
+    display: inline;
+
+
+}
+
+.grid {
+    opacity: 0.5;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.grid:hover{
+    zoom: 100%;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transform: scale(1.1);
+}
+
+.ytvideo {
+    opacity: 0.5;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.ytvideo:hover{
+    zoom: 100%;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transform: scale(1.1);
+}
+
+
+#hund4 {
+    width: 300px;
+    object-fit: cover;
+    /*object-position: center;*/
+}
