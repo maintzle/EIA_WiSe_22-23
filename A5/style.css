@@ -94,14 +94,14 @@ table {
 @keyframes slideshow{
     0%,
     50% {
-        background-image: url("Bild_lenny.jpg");
+        background-image: url("Bild_Lenny.jpg");
     }
     50%,
     100% {
         background-image: url("Bild_lenny_2.jpg");
     }
     100% {
-        background-image: url("bild_lenny.jpg");
+        background-image: url("Bild_Lenny.jpg");
     }
 }
 
