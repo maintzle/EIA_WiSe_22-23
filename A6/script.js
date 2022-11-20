@@ -9,3 +9,4 @@ console.log(prozentPolen);
 const prozentergebnis = bevölkerungsdichtePolen2022 / prozentPolen;
 console.log(prozentergebnis);
 //# sourceMappingURL=script.js.map
+
