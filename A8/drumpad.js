@@ -1,41 +1,32 @@
-var text;
-var eins = new Audio('./audio/snare-mp3');
-var zwei = new Audio('./audio/hihat.mp3');
-var drei = new Audio('./audio/kick.mp3');
-var vier = new Audio('./audio/A.mp3');
-var fuenf = new Audio('./audio/C.mp3');
-var sechs = new Audio('./audio/F.mp3');
-var sieben = new Audio('./audio/G.mp3');
-var acht = new Audio('./audio/laugh-1.mp3');
-var neun = new Audio('./audio/laugh-2.mp3');
-function test(text, eins) {
-    eins.play();
+const sounds = [
+    new Audio("assets/hihat.mp3"),
+    new Audio("assets/kick.mp3"),
+    new Audio("assets/snare.mp3"),
+    new Audio("assets/A.mp3"),
+    new Audio("assets/C.mp3"),
+    new Audio("assets/F.mp3"),
+    new Audio("assets/G.mp3"),
+    new Audio("assets/laugh-1.mp3"),
+    new Audio("assets/laugh-2.mp3")
+];
+function playSample(sound) {
+    sound.play();
 }
-document.querySelector("#one").addEventListener('click', function () {
-    test("1", eins);
-});
-document.querySelector("#two").addEventListener('click', function () {
-    test("2", zwei);
-});
-document.querySelector("#three").addEventListener('click', function () {
-    test("3", drei);
-});
-document.querySelector("#four").addEventListener('click', function () {
-    test("4", vier);
-});
-document.querySelector("#five").addEventListener('click', function () {
-    test("5", fuenf);
-});
-document.querySelector("#six").addEventListener('click', function () {
-    test("6", sechs);
-});
-document.querySelector("#seven").addEventListener('click', function () {
-    test("7", sieben);
-});
-document.querySelector("#eight").addEventListener('click', function () {
-    test("8", acht);
-});
-document.querySelector("#nine").addEventListener('click', function () {
-    test("9", neun);
-});
+document.querySelector("#1").addEventListener("click", function () { playSample(sounds[0]); });
+document.querySelector("#2").addEventListener("click", function () { playSample(sounds[1]); });
+document.querySelector("#3").addEventListener("click", function () { playSample(sounds[2]); });
+document.querySelector("#4").addEventListener("click", function () { playSample(sounds[3]); });
+document.querySelector("#5").addEventListener("click", function () { playSample(sounds[4]); });
+document.querySelector("#6").addEventListener("click", function () { playSample(sounds[5]); });
+document.querySelector("#7").addEventListener("click", function () { playSample(sounds[6]); });
+document.querySelector("#8").addEventListener("click", function () { playSample(sounds[7]); });
+document.querySelector("#9").addEventListener("click", function () { playSample(sounds[8]); });
+function playBeat() {
+    setInterval(function () {
+        for (let counter = 0; counter < sounds.length; counter++) {
+            sounds[counter].play();
+        }
+    }, 500);
+}
+document.querySelector("#playbutton").addEventListener("click", function () { playBeat(); });
 //# sourceMappingURL=drumpad.js.map

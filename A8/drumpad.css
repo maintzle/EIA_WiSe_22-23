@@ -1,0 +1,38 @@
+*{
+   padding: 0px;
+   margin: 0px;
+ }
+
+ body{
+    background-color: #000000;
+    text-align: center;
+ }
+
+ .pad{
+    width: 150px;
+    height: 150px;
+    border-width: 2px;
+    border-radius: 5%;
+    display: inline-block;
+    margin: 4px 2px;
+ }
+
+ .drum{
+    background-image: linear-gradient(#819FF7, #013ADF);
+ }
+
+ .note{
+    background-image: linear-gradient(#F5A9F2, #FE2EC8);
+ }
+
+ .laugh{
+    background-image: linear-gradient(#F5D0A9, #FF8000);
+ }
+
+ .pad:hover{
+    opacity: 0.5;
+ }
+
+ img:hover{
+    opacity: 0.5;
+ }
