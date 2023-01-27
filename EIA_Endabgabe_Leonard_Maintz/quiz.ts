@@ -1,8 +1,4 @@
-//Dieser Code erstellt eine Variable "quiz" als ein Objekt, das vier verschiedene Kategorien von Fragen enthält: "html", "css", "typescript" und "mixed". 
-//Jede Kategorie ist ein Array von Fragen, die jeweils eine Frage, mehrere Auswahlmöglichkeiten, die richtige Antwort und eine Erklärung enthalten.
-//Desweiteren sind die aktive Kategorie als String, die aktuelle Frage in dieser Kategorie als 0-basierter Index in das Array
-//der bisher erreichte Punktwert score und ein boolean ob das Quiz abgeschlossen ist, enthalten.
-
+//Jede Kategorie ist ein Array von Fragen, die jeweils eine Fragetext, mehrere Auswahlmöglichkeiten, die richtige Antwort und eine Erklärung enthalten.
 type qQuestion = {
     question: string;
     choices: Array<string>;
@@ -10,6 +6,7 @@ type qQuestion = {
     explanation: string;
 }
 type qCategory = Array<qQuestion>;
+//Quiz enthält alle 4 Kategorien sowie die aktuelle Kategorie, der Index der aktuellen Frage, der Punktestand und ob das Quiz schon beendet ist.
 type qQuiz = {
     html: qCategory;
     css: qCategory;
@@ -24,7 +21,8 @@ type qQuiz = {
 let quiz: qQuiz;
 
 // Die Funktion selectCategory wird verwendet, um eine bestimmte Kategorie für ein Quiz auszuwählen.
-
+// danach wird die Kategorie-Auswahl ausgeblendet, der Bereich für die Fragen eingeblendet,
+// mit der ersten Frage und 0 Punkten begonnen.
 function selectCategory(category: string) {
     document.getElementById("category-selector").style.display = "None"
     document.getElementById("quiz").style.display = "Block"
@@ -32,13 +30,11 @@ function selectCategory(category: string) {
     quiz.currentQuestion = 0;
     quiz.score = 0;
     quiz.isQuizOver = false;
-    shuffle(quiz[category]);
     displayQuestion();
 }
 
 //Diese Funktion mischt das übergebene array in dem es komplett durchlaufen wird
 //und jedes Element mit einem zufällig ausgewählten Element ausgetauscht wird
-
 function shuffle(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -47,7 +43,9 @@ function shuffle(array: any[]) {
 }
 
 //Die Funktion "displayQuestion" wird verwendet, um Fragen im Quiz anzuzeigen.
-//dazu werden die Antworten im shuffledArray.
+//Bei einem shuffle auf das choices Array würde correctAnswer falsch, also
+//wird ein einfaches shuffledArray mit den Indizes gemischt und durchlaufen.
+//shuffledArray[i] liefert dann wieder den originalen Index in choices.
 //Zuletzt wird der aktuelle Punktestand im HTML angezeigt und die Erklärung zur 
 //ggfs. vorherigen Frage wird ausgeblendet.
 

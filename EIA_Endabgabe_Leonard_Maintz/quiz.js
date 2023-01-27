@@ -1,9 +1,7 @@
-//Dieser Code erstellt eine Variable "quiz" als ein Objekt, das vier verschiedene Kategorien von Fragen enthält: "html", "css", "typescript" und "mixed". 
-//Jede Kategorie ist ein Array von Fragen, die jeweils eine Frage, mehrere Auswahlmöglichkeiten, die richtige Antwort und eine Erklärung enthalten.
-//Desweiteren sind die aktive Kategorie als String, die aktuelle Frage in dieser Kategorie als 0-basierter Index in das Array
-//der bisher erreichte Punktwert score und ein boolean ob das Quiz abgeschlossen ist, enthalten.
 let quiz;
 // Die Funktion selectCategory wird verwendet, um eine bestimmte Kategorie für ein Quiz auszuwählen.
+// danach wird die Kategorie-Auswahl ausgeblendet, der Bereich für die Fragen eingeblendet,
+// mit der ersten Frage und 0 Punkten begonnen.
 function selectCategory(category) {
     document.getElementById("category-selector").style.display = "None";
     document.getElementById("quiz").style.display = "Block";
@@ -11,7 +9,6 @@ function selectCategory(category) {
     quiz.currentQuestion = 0;
     quiz.score = 0;
     quiz.isQuizOver = false;
-    shuffle(quiz[category]);
     displayQuestion();
 }
 //Diese Funktion mischt das übergebene array in dem es komplett durchlaufen wird
