@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<script src="quiz.js"></script>
+<head>
+    <title>Quiz Application</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+<body>
+<div id="category-selector">
+    <h2>W&auml;hle eine Kategorie:</h2>
+    <br/>
+    <button onclick="selectCategory('html')" class="category-btn">HTML</button>
+    <button onclick="selectCategory('css')" class="category-btn">CSS</button>
+    <button onclick="selectCategory('typescript')" class="category-btn">TypeScript</button>
+    <button onclick="selectCategory('mixed')" class="category-btn">Mixed</button>
+</div>
+<div id="quiz" style="display: block">
+    <br>
+
+    <div id="question"></div>
+    <div id="choices">
+        <button id="choice0" class="choice-btn"></button>
+        <button id="choice1" class="choice-btn"></button>
+        <button id="choice2" class="choice-btn"></button>
+        
+    </div>
+    <div id="score"></div>
+    <div id="explanation" style="display: none"></div>
+    <br>
+    <div id="next-btn-div"><button id="next-btn" onclick="displayQuestion()">Weiter</button></div>
+</div>
+<div id="quiz-over" style="display: none"></div>
+</body>
+<footer>
+    <p>Leonard Maintz</p>
+    <p>272233</p>
+</footer>
+</html>
